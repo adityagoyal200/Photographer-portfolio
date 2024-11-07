@@ -1,7 +1,9 @@
 const About = () => {
     return (
       <div className="z-0 p-8 text-white">
-        About egrahbhdwbadbiwidabdl
+        <div>
+          Hi i am Aditya goyal 
+        </div>
       </div>
     );
   };
