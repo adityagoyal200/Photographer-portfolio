@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navItem {
+    @apply hover:text-white flex items-center space-x-2 transition duration-300 transform hover:scale-110
+}
