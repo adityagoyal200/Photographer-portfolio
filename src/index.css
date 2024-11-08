@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* NavItem Styling */
 .navItem {
-  @apply hover:text-white flex items-center space-x-2 transition duration-300 transform hover:scale-110;
+  @apply hover:text-white flex items-center space-x-2 transition duration-300 transform hover:scale-110 p-2; /* Padding added */
 }
 
-/* Typing Animation */
 @keyframes typing {
   0% {
     width: 0;
@@ -31,10 +29,9 @@
   overflow: hidden;
   white-space: nowrap;
   width: 0;
-  animation: typing 4s steps(30) infinite; /* Adjust timing and steps */
+  animation: typing 4s steps(30) infinite; /* Customize steps based on text length */
 }
 
-/* Blinking Cursor Animation */
 @keyframes blink {
   0%, 50%, 100% {
     border-color: transparent;
@@ -56,5 +53,16 @@ h1 span.typing {
   overflow: hidden;
   white-space: nowrap;
   width: 0;
-  animation: typing 4s steps(30) infinite; /* Infinite typing animation */
+  animation: typing 4s steps(30) infinite;
+}
+
+@media (max-width: 768px) {
+  .Hero .absolute {
+    width: 100%;
+  }
+
+  .Hero {
+    width: 100%; /* Full width on small screens */
+    padding: 2rem 1rem; /* Adjust padding for smaller screens */
+  }
 }
