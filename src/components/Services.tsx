@@ -82,7 +82,7 @@ const Services = () => {
                 y: inView ? 0 : 50,
               }}
               transition={{
-                duration: 0.8, // Reduced duration for faster animations
+                duration: 0.8, 
                 delay: index * 0.2,
               }}
             >
@@ -100,12 +100,11 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Background Images - Visual appeal */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://res.cloudinary.com/dcv1oi1w3/image/upload/v1731072257/l5vuo69tm7zzn9hvgdiz.jpg" // Add a relevant background photo
+          src="https://res.cloudinary.com/dcv1oi1w3/image/upload/v1731072257/l5vuo69tm7zzn9hvgdiz.jpg" 
           alt="Photoshoot Background"
-          className="w-full h-full object-cover opacity-30" // Reduced opacity for better visibility
+          className="w-full h-full object-cover opacity-30" 
         />
       </div>
     </section>

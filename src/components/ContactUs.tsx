@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaInstagram, FaLink } from 'react-icons/fa';  // FaLink used as a placeholder for the Bhenace logo
-import Aanchal from '../assets/images/Aanchal.jpg';  // Ensure the path is correct
+import { FaInstagram, FaLink } from 'react-icons/fa';  
+import Aanchal from '../assets/images/Aanchal.jpg';  
 
 const ContactUs = () => {
   const { ref, inView } = useInView({
@@ -11,20 +11,19 @@ const ContactUs = () => {
 
   const user = {
     name: 'Aanchal Jain',
-    email: 'goyaladitya3815@gmail.com', 
-    phone: '+91 123 456 7890',
+    email: '', 
+    phone: '',
   };
 
   return (
     <section 
       className="z-10 w-full py-16 px-6 sm:px-8 md:px-12 backdrop-blur-md overflow-x-hidden font-mono"
       style={{
-        backgroundImage: `url(${Aanchal})`,  // Apply the background image
+        backgroundImage: `url(${Aanchal})`, 
         backgroundSize: 'cover',
-        backgroundPosition: 'top',  // Ensures the image aligns from the top
+        backgroundPosition: 'top', 
       }}
     >
-      {/* Add a semi-transparent overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
       <div className="max-w-screen-xl mx-auto flex flex-col items-center relative z-10">
@@ -63,13 +62,11 @@ const ContactUs = () => {
           </div>
         </motion.div>
       </div>
-
-      {/* Footer Section */}
       <footer className="w-full text-white py-6 mt-12">
         <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
             <FaLink size={30} className="text-white mr-4" /> 
-            <a href="https://www.bhenace.com" 
+            <a href="https://www.behance.net/aanchaljain5?fbclid=PAZXh0bgNhZW0CMTEAAaYm5oFyD_fRVBbb_ych_88sa3TuyETCslkCboODpo9C90evw6HH5Q4WF1s_aem_gUVusa_-tiHY_pCWequThg" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-lg hover:text-blue-500"

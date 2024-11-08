@@ -9,16 +9,11 @@ import { Element } from 'react-scroll';
 const App = () => {
   return (
     <div className="bg-zinc-900 min-h-screen text-white relative w-full">
-      {/* Background Image with opacity */}
       <div className="absolute top-0 left-0 w-full h-full bg-cover bg-fixed opacity-10"
         style={{ backgroundImage: `url(${my})` }} ></div>
-      
-      {/* Navbar */}
       <div className="relative z-10">
         <Navbar />
       </div>
-      
-      {/* Main Content */}
       <div className="relative z-10">
         <Element name="home">
           <Hero />

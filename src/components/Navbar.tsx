@@ -5,14 +5,12 @@ import { GiGraveFlowers } from "react-icons/gi";
 import { useState } from 'react';
 
 const Navbar = () => {
-  // State for the mobile menu toggle
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <div className="relative z-2 flex justify-between items-center p-4 backdrop-blur-md rounded-lg shadow-lg">
-      {/* Logo */}
       <img
         src={enzo}
         alt="enzo"
@@ -21,7 +19,6 @@ const Navbar = () => {
         className="rounded-full border-2 border-white shadow-md transition duration-300 transform hover:scale-110"
       />
 
-      {/* Navbar for Desktop */}
       <nav className="hidden md:flex justify-center w-full font-mono">
         <ul className="flex space-x-12">
           <li className="navItem flex items-center"> 
@@ -60,7 +57,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden absolute top-16 left-0 w-full bg-zinc-900 text-white rounded-lg shadow-lg p-4">
           <ul className="space-y-4">
@@ -92,7 +88,6 @@ const Navbar = () => {
         </div>
       )}
 
-      {/* Right Icon */}
       <GiGraveFlowers size={30} className="mr-5 hidden md:block" />
     </div>
   );

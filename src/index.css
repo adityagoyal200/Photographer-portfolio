@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .navItem {
-  @apply hover:text-white flex items-center space-x-2 transition duration-300 transform hover:scale-110 p-2; /* Padding added */
+  @apply hover:text-white flex items-center space-x-2 transition duration-300 transform hover:scale-110 p-2;
 }
 
 @keyframes typing {
@@ -29,7 +29,7 @@
   overflow: hidden;
   white-space: nowrap;
   width: 0;
-  animation: typing 4s steps(30) infinite; /* Customize steps based on text length */
+  animation: typing 4s steps(30) infinite;
 }
 
 @keyframes blink {
@@ -43,11 +43,10 @@
 
 .typing::after {
   content: '';
-  border-right: 3px solid #fff; /* Cursor effect */
+  border-right: 3px solid #fff;
   animation: blink 0.7s step-end infinite;
 }
 
-/* Example for text section */
 h1 span.typing {
   display: inline-block;
   overflow: hidden;
@@ -62,7 +61,7 @@ h1 span.typing {
   }
 
   .Hero {
-    width: 100%; /* Full width on small screens */
-    padding: 2rem 1rem; /* Adjust padding for smaller screens */
+    width: 100%; 
+    padding: 2rem 1rem; 
   }
 }
