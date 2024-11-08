@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import debounce from 'lodash.debounce';
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -8,15 +9,12 @@ const Hero = () => {
   const [isTyping, setIsTyping] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = debounce(() => {
       setScrollY(window.scrollY);
-    };
+    }, 100);
 
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
@@ -30,23 +28,20 @@ const Hero = () => {
   }, [scrollY, controls]);
 
   useEffect(() => {
-    const typingTimer = setTimeout(() => {
-      setIsTyping(true);
-    }, 500);
+    const typingTimer = setTimeout(() => setIsTyping(true), 500);
     return () => clearTimeout(typingTimer);
   }, []);
 
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-x-hidden">
-      {/* Left Video Section */}
       <motion.div
-        className="absolute left-0 top-0 w-full sm:w-[48%] md:w-[55%] h-full flex items-center justify-center"
+        className="absolute left-0 top-0 w-full sm:w-[60%] md:w-[50%] lg:w-[50%] xl:w-[45%] h-full flex items-center justify-center"
         initial={{ opacity: 0, x: -100 }}
         animate={controls}
         transition={{ duration: 1.5 }}
       >
         <div className="relative w-full h-full rounded-lg shadow-xl transform transition-transform duration-500 hover:scale-105">
-          <div className="absolute inset-0 w-full h-full overflow-hidden rounded-md">
+          <div className="absolute p-4 inset-0 w-full h-full overflow-hidden rounded-md">
             <video
               ref={videoRef}
               className="w-full h-full object-cover rounded-lg brightness-[0.6]"
@@ -54,6 +49,7 @@ const Hero = () => {
               loop
               autoPlay
               playsInline
+              onLoadedData={() => videoRef.current?.play()}
             >
               <source
                 src="https://res.cloudinary.com/dcv1oi1w3/video/upload/v1731070605/k4mbzrqetnjgbjppguil.mp4"
@@ -65,9 +61,8 @@ const Hero = () => {
         </div>
       </motion.div>
 
-      {/* Right Text Section */}
       <motion.div
-        className="absolute right-0 top-0 w-full sm:w-[48%] md:w-[45%] h-full flex items-center justify-center px-6"
+        className="absolute right-0 top-0 w-full sm:w-[40%] md:w-[50%] lg:w-[60%] xl:w-[65%] h-full flex items-center justify-center px-6"
         initial={{ opacity: 0, x: 100 }}
         animate={controls}
         transition={{ duration: 1 }}

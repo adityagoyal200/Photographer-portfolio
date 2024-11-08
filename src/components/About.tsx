@@ -20,7 +20,7 @@ const About = () => {
     <section className="w-full py-20 px-6 sm:px-12 backdrop-blur-md overflow-x-hidden">
       <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center space-y-12 lg:space-y-0">
         <motion.div
-          className="flex flex-col sm:flex-row lg:flex-col xl:flex-row lg:w-1/2 w-full items-center justify-center"
+          className="flex flex-col mr-4 sm:flex-row lg:flex-col xl:flex-row lg:w-1/2 w-full items-center justify-center"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
           transition={{ duration: 1.2, type: 'spring', stiffness: 100 }}
