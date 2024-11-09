@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaInstagram, FaLink } from 'react-icons/fa';  
+import { FaInstagram} from 'react-icons/fa';  
 import Aditya from '../assets/images/Aditya.jfif';  
 
 const ContactUs = () => {
