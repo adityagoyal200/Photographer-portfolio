@@ -29,8 +29,8 @@ const services = [
 ];
 
 const Services = () => {
-  const [inView, setInView] = useState(false); // Track whether the section is in view
-  const sectionRef = useRef(null); // Reference to the section
+  const [inView, setInView] = useState(false); 
+  const sectionRef = useRef(null); 
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -71,11 +71,11 @@ const Services = () => {
           My Services
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid animate-bounce grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="p-6 bg-white bg-opacity-90 backdrop-blur-lg rounded-lg shadow-lg"
+              className="p-6 bg-zinc-200 bg-opacity-90 backdrop-blur-lg rounded-lg shadow-lg"
               initial={{ opacity: 0, y: 50 }}
               animate={{
                 opacity: inView ? 1 : 0,

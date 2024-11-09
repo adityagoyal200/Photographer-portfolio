@@ -74,7 +74,7 @@ const ContactUs = () => {
               Bhenace
             </a>
           </div>
-          <p className="text-sm text-center md:text-left">&copy; {new Date().getFullYear()} Aditya Goyal [Developer]. All Rights Reserved.</p>
+          <p className="text-sm text-center md:text-left animate-pulse">&copy; {new Date().getFullYear()} Aditya Goyal [Developer]. All Rights Reserved.</p>
         </div>
       </footer>
     </section>

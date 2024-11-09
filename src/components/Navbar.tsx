@@ -16,7 +16,7 @@ const Navbar = () => {
         alt="enzo"
         width={50}
         height={50}
-        className="rounded-full border-2 border-white shadow-md transition duration-300 transform hover:scale-110"
+        className="rounded-full border-2 border-white shadow-md transition duration-300 transform hover:scale-110 hover:animate-pulse"
       />
 
       <nav className="hidden md:flex justify-center w-full font-mono">
@@ -24,31 +24,30 @@ const Navbar = () => {
           <li className="navItem flex items-center"> 
             <Link to="home" smooth={true} duration={500} className="flex items-center space-x-1">
               <FaHome size={18} className="rounded-full bg-white/20 p-1" />
-              <span>Home</span>
+              <span className="hover:animate-pulse">Home</span>
             </Link>
           </li>
           <li className="navItem flex items-center"> 
             <Link to="about" smooth={true} duration={500} className="flex items-center space-x-1">
               <FaInfoCircle size={18} className="rounded-full bg-white/20 p-1" />
-              <span>About</span>
+              <span className="hover:animate-pulse">About</span>
             </Link>
           </li>
           <li className="navItem flex items-center"> 
             <Link to="services" smooth={true} duration={500} className="flex items-center space-x-1">
               <FaServicestack size={18} className="rounded-full bg-white/20 p-1" />
-              <span>Services</span>
+              <span className="hover:animate-pulse">Services</span>
             </Link>
           </li>
           <li className="navItem flex items-center"> 
             <Link to="contact" smooth={true} duration={500} className="flex items-center space-x-1">
               <FaEnvelope size={18} className="rounded-full bg-white/20 p-1" />
-              <span>Contact</span>
+              <span className="hover:animate-pulse">Contact</span>
             </Link>
           </li>
         </ul>
       </nav>
 
-      {/* Hamburger Menu for Mobile */}
       <div className="md:hidden flex items-center">
         <button onClick={toggleMenu} className="text-white">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8">
@@ -88,7 +87,7 @@ const Navbar = () => {
         </div>
       )}
 
-      <GiGraveFlowers size={30} className="mr-5 hidden md:block" />
+      <GiGraveFlowers size={30} className="mr-5 hidden md:block hover:animate-pulse" />
     </div>
   );
 };
