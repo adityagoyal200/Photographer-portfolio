@@ -66,3 +66,6 @@ h1 span.typing {
   }
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
