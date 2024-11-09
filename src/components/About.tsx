@@ -28,33 +28,33 @@ const About = () => {
           {images.map((image, index) => (
             <motion.div
               key={index}
-              className="relative w-full sm:h-[200px] md:h-[250px] lg:h-[300px] h-[200px] overflow-hidden rounded-lg shadow-xl mr-2"
-              initial={{ opacity: 0 }}
+              className="relative w-full sm:h-[200px] md:h-[250px] lg:h-[500px] h-[200px] overflow-hidden rounded-lg shadow-xl mr-2 hover: md:z-50"
+              initial={{ opacity: 1 }}
               animate={{ opacity: inView ? 1 : 0 }}
               transition={{
-                delay: index * 0.3,
-                duration: 0.8,
-                ease: "easeInOut"
+                delay: index * 0.4,
+                duration: 1,
+                ease: "easeIn"
               }}
             >
               <motion.img
                 src={image}
                 alt={`Image ${index + 1}`}
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-full object-cover rounded-lg hover:animate-pulse"
                 loading="lazy" 
               />
             </motion.div>
           ))}
         </motion.div>
         <motion.div
-          className="lg:w-1/2 w-full text-white"
+          className="lg:w-1/2 w-full text-slate-300"
           ref={ref}
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 100 }}
           transition={{ duration: 1.2, type: 'spring', stiffness: 100 }}
         >
           <motion.h2
-            className="text-3xl sm:text-4xl font-bold mb-4"
+            className="text-3xl sm:text-4xl font-bold mb-4 animate-pulse"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -50 }}
             transition={{ delay: 0.5, duration: 1, type: 'spring', stiffness: 50 }}
@@ -69,10 +69,10 @@ const About = () => {
               delay: 0.5,
               duration: 1,
               type: 'spring',
-              stiffness: 50
+              stiffness: 100
             }}
           >
-            Hey, I’m Aanchal, your friendly neighborhood photographer, capturing life one click at a time. I’m here to make sure you look like a million bucks without the price tag. From candid shots to creative photoshoots, I turn moments into memories — with a side of flair and a dash of humor.
+            Hey, I’m ....., your friendly neighborhood photographer, capturing life one click at a time. I’m here to make sure you look like a million bucks without the price tag. From candid shots to creative photoshoots, I turn moments into memories — with a side of flair and a dash of humor.
             I don’t just snap pictures; I tell stories — stories that make you look good, feel good, and maybe even laugh at yourself a little. Whether you're after a portrait that screams ‘I’ve got this’ or a photoshoot that'll make your Instagram pop, I’ve got you covered.
             Let's make your moments unforgettable, or at least Insta-worthy. (I promise no awkward posing... unless you want it, of course.)
           </motion.p>

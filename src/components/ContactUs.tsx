@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaInstagram, FaLink } from 'react-icons/fa';  
-import Aanchal from '../assets/images/Aanchal.jpg';  
+import Aditya from '../assets/images/Aditya.jfif';  
 
 const ContactUs = () => {
   const { ref, inView } = useInView({
@@ -10,16 +10,16 @@ const ContactUs = () => {
   });
 
   const user = {
-    name: 'Aanchal Jain',
-    email: '', 
-    phone: '',
+    name: 'Aditya Goyal',
+    email: 'goyaladitya3815@gmail.com', 
+    phone: '+918580556658',
   };
 
   return (
     <section 
       className="z-10 w-full py-16 px-6 sm:px-8 md:px-12 backdrop-blur-md overflow-x-hidden font-mono"
       style={{
-        backgroundImage: `url(${Aanchal})`, 
+        backgroundImage: `url(${Aditya})`, 
         backgroundSize: 'cover',
         backgroundPosition: 'top', 
       }}
@@ -38,20 +38,20 @@ const ContactUs = () => {
 
           <div className="space-y-4 mb-6">
             <div className="text-lg font-medium text-white">
-              <p><strong>Name:</strong> {user.name}</p>
+              <p><strong>Name: </strong> {user.name}</p>
             </div>
             <div className="text-lg font-medium text-white">
-              <p><strong>Email:</strong> {user.email}</p>
+              <p><strong>Email: </strong> {user.email}</p>
             </div>
             <div className="text-lg font-medium text-white">
-              <p><strong>Phone Number:</strong> {user.phone}</p>
+              <p><strong>Phone Number: </strong> {user.phone}</p>
             </div>
           </div>
 
           <div className="mt-6 text-center">
             <p className="text-lg font-medium text-white">Follow me on Instagram:</p>
             <a 
-              href="https://www.instagram.com/aesthetically._.yours_/" 
+              href="https://www.instagram.com/__.adityagoyal/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-center justify-center text-red-500 mt-2 hover:text-blue-600"
@@ -62,19 +62,9 @@ const ContactUs = () => {
           </div>
         </motion.div>
       </div>
-      <footer className="w-full text-white py-6 mt-12">
-        <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center mb-4 md:mb-0">
-            <FaLink size={30} className="text-white mr-4" /> 
-            <a href="https://www.behance.net/aanchaljain5?fbclid=PAZXh0bgNhZW0CMTEAAaYm5oFyD_fRVBbb_ych_88sa3TuyETCslkCboODpo9C90evw6HH5Q4WF1s_aem_gUVusa_-tiHY_pCWequThg" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-lg hover:text-blue-500"
-            >
-              Bhenace
-            </a>
-          </div>
-          <p className="text-sm text-center md:text-left animate-pulse">&copy; {new Date().getFullYear()} Aditya Goyal [Developer]. All Rights Reserved.</p>
+      <footer className="w-full text-white items-center py-6 mt-24">
+        <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row">
+          <p className="text-sm animate-pulse">&copy; {new Date().getFullYear()} Aditya Goyal. All Rights Reserved.</p>
         </div>
       </footer>
     </section>

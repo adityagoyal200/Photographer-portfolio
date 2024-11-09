@@ -37,12 +37,12 @@ const Services = () => {
       (entries) => {
         const entry = entries[0];
         if (entry.isIntersecting) {
-          setInView(true); // Trigger animation when the section is in view
+          setInView(true); 
         } else {
-          setInView(false); // Reset animation if the section is out of view
+          setInView(false); 
         }
       },
-      { threshold: 0.5 } // Trigger animation when 50% of the section is visible
+      { threshold: 0.5 } 
     );
 
     if (sectionRef.current) {
@@ -63,7 +63,7 @@ const Services = () => {
     >
       <div className="max-w-screen-xl mx-auto text-center relative z-10">
         <motion.h2
-          className="text-4xl font-bold text-white mb-10"
+          className="text-4xl font-bold text-white mb-10 pb-16"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
           transition={{ duration: 1 }}
@@ -104,7 +104,7 @@ const Services = () => {
         <img
           src="https://res.cloudinary.com/dcv1oi1w3/image/upload/v1731072257/l5vuo69tm7zzn9hvgdiz.jpg" 
           alt="Photoshoot Background"
-          className="w-full h-full object-cover opacity-30" 
+          className="w-full h-full object-cover opacity-50" 
         />
       </div>
     </section>

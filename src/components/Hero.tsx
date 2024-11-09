@@ -20,7 +20,7 @@ const Hero = () => {
   useEffect(() => {
     if (scrollY < 200) {
       controls.start({ opacity: 1, x: 0 });
-    } else if (scrollY >= 200 && scrollY < 500) {
+    } else if (scrollY >= 250 && scrollY < 500) {
       controls.start({ opacity: 0.5, x: 50 });
     } else {
       controls.start({ opacity: 0, x: 100 });
@@ -35,16 +35,16 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-x-hidden">
       <motion.div
-        className="absolute left-0 top-0 w-full sm:w-[60%] md:w-[50%] lg:w-[50%] xl:w-[45%] h-full flex items-center justify-center"
+        className="absolute left-0 top-0 w-full sm:w-[50%] md:w-[50%] lg:w-[50%] xl:w-[45%] h-full flex items-center justify-center"
         initial={{ opacity: 0, x: -100 }}
         animate={controls}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 2 }}
       >
         <div className="relative w-full h-full rounded-lg shadow-xl transform transition-transform duration-500 hover:scale-105">
           <div className="absolute p-4 inset-0 w-full h-full overflow-hidden rounded-md">
             <video
               ref={videoRef}
-              className="w-full h-full object-cover rounded-lg brightness-[0.6]"
+              className="w-full h-full object-cover rounded-lg brightness-[0.7]"
               muted
               loop
               autoPlay
@@ -70,7 +70,7 @@ const Hero = () => {
         <div className="w-full h-[80%] flex flex-col justify-center text-center text-white">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mono mb-4">
             <span className={`inline-block ${isTyping ? 'typing' : ''} text-shadow-lg`}>
-              Hello, I'm Aanchal
+              Hello, I'm .....
             </span>
           </h1>
         </div>
